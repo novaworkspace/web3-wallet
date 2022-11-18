@@ -8,13 +8,22 @@
     "test:ci": "jest --ci"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.0",
+    "@web3-react/core": "^6.1.9",
+    "@web3-react/network": "^8.0.0-beta.0",
+    "crypto-js": "^4.1.1",
+    "lodash.merge": "^4.6.2",
     "next": "latest",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "redux": "^4.2.0",
+    "redux-persist": "^6.0.0",
+    "web3": "1.7.4"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "5.16.4",
-    "@testing-library/react": "13.2.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/react-hooks": "^8.0.1",
     "@testing-library/user-event": "14.2.0",
     "@types/react": "18.0.9",
     "jest": "28.1.0",

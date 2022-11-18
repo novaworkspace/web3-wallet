@@ -18,8 +18,6 @@ export default function Home() {
 
   const hasWallets = !!wallets.length;
 
-  console.log("wallets render", wallets, hasSecret);
-
   const handleInputChange = useCallback(
     (e) => {
       setInputValue(e.target.value);

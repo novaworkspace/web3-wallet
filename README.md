@@ -1,6 +1,9 @@
-# Web3 Wallet Client
+# Web3 Wallet Client (EVM)
 
-Stack:  `Next.js`, `React`, `Web3.js`,
+This project is built with feature based approach. React Context is using as a state managment. Client supports only *http provider*.
+
+Stack:  `Next.js`, `React`, `Web3.js`  
+Tests: `Jest`, `testing-liabrary`, `cypress`
 
 
 ## How to Use

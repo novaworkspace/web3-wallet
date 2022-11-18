@@ -50,21 +50,43 @@ export default function Home() {
             value={inputValue}
             onChange={handleInputChange}
           />
-          <button data-testid="show" onClick={handleUpdateSecret}>
+          <button
+            id="saveButton"
+            data-testid="show"
+            onClick={handleUpdateSecret}
+          >
             Save
           </button>
         </div>
       )}
 
-      {hasWallets && !hasSecret && (
+      {hasSecret && (
         <div className={s.card}>
-          <input
+          <button
+            id="createButton"
+            data-testid="show"
+            onClick={create.handleCreate}
+          >
+            Create a wallet
+          </button>
+          {create.status === "ERROR" && (
+            <div className={s.error} style={{ marginTop: 8 }}>
+              Setup the password
+            </div>
+          )}
+        </div>
+      )}
+
+      {hasWallets && (
+        <div className={s.card}>
+          {!hasSecret && <input
             placeholder="password"
             data-testid="input"
             value={inputValue}
             onChange={handleInputChange}
-          />
+          />}
           <button
+            id="showButton"
             data-testid="show"
             onClick={() => restore.handleRestore(inputValue)}
           >
@@ -73,19 +95,6 @@ export default function Home() {
           {restore.status === "ERROR" && (
             <div className={s.error} style={{ marginTop: 8 }}>
               Wrong password!
-            </div>
-          )}
-        </div>
-      )}
-
-      {hasSecret && (
-        <div className={s.card}>
-          <button data-testid="show" onClick={create.handleCreate}>
-            Create a wallet
-          </button>
-          {create.status === "ERROR" && (
-            <div className={s.error} style={{ marginTop: 8 }}>
-              Setup the password
             </div>
           )}
         </div>

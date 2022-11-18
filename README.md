@@ -1,29 +1,30 @@
-# Next.js + Jest
+# Web3 Wallet Client
 
-This example shows how to configure Jest to work with Next.js.
+Stack:  `Next.js`, `React`, `Web3.js`,
 
-This includes Next.js' built-in support for Global CSS, CSS Modules and TypeScript.
 
 ## How to Use
 
-Quickly get started using [Create Next App](https://github.com/vercel/next.js/tree/canary/packages/create-next-app#readme)!
-
-In your terminal, run the following command:
-
+Install dependencies
 ```bash
-npx create-next-app --example with-jest with-jest-app
+yarn
+```
+Start project in development mode
+```bash
+yarn dev
 ```
 
+
+
+## Run Tests
+
+Unit and Integration
+
 ```bash
-yarn create next-app --example with-jest with-jest-app
+yarn test
 ```
+Auto tests (Cypress)
 
 ```bash
-pnpm create next-app --example with-jest with-jest-app
-```
-
-## Run Jest Tests
-
-```bash
-npm test
+yarn test:e2e
 ```

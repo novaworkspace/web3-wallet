@@ -49,7 +49,7 @@ export function WalletProvider({ storageProvider, children }) {
     web3.eth.accounts.wallet.save(secret);
     // update keystore
     return account;
-  }, [web3]);
+  }, [web3, secret]);
 
   const syncWithWeb3Wallets = useCallback(() => {
     // get current list of wallets
